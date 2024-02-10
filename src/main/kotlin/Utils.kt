@@ -1,5 +1,3 @@
-package sorting
-
 object Utils {
 
 }
