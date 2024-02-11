@@ -1,15 +1,15 @@
 package sorting
 
-class InsertionSort: ISortAlgorithm {
+class InsertionSort : ISortAlgorithm {
     override fun sort(arr: IntArray): IntArray {
         for (i in 1..<arr.size) {
             val key = arr[i]
-            var j = i - 1
-            while (j >= 0 && arr[j] > key) {
-                arr[j + 1] = arr[j]
+            var j = i
+            while (j > 0 && arr[j-1] > key) {
+                arr[j] = arr[j - 1]
                 j--
             }
-            arr[j + 1] = key
+            arr[j] = key
         }
         return arr
     }
@@ -28,10 +28,10 @@ class InsertionSort: ISortAlgorithm {
 sort(arr):
     for i from 1 to arr.size - 1 do
         key ← arr[i]
-        j ← i - 1
-        while j >= 0 and arr[j] > key do
-            arr[j + 1] ← arr[j]
+        j ← i
+        while j > 0 and arr[j] > key do
+            arr[j] ← arr[j-1]
             j ← j - 1
-        arr[j + 1] ← key
+        arr[j] ← key
     return arr
  */
